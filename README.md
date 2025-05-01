@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+🌍 Tourist AI — Smart Travel Guide for Tamil Nadu Tourist AI is an AI-powered web application designed to be your smart, multilingual travel companion for exploring the vibrant state of Tamil Nadu, India. With real-time navigation, voice assistance, and intelligent recommendations, Tourist AI makes your journey both informative and effortless.
 
-## Project info
+🚀 Features 🗺️ Explore Famous Places Discover historical, cultural, and natural attractions across Tamil Nadu with rich, dynamic descriptions.
 
-**URL**: https://lovable.dev/projects/68bcdf8e-5c22-408d-b565-96876db18b31
+🗣️ Multilingual AI Assistant (Yuna AI) Communicates fluently in multiple languages to assist and guide tourists during their exploration.
 
-## How can I edit this code?
+🎙️ Voice Interaction Integrated with LiveKit for real-time voice communication between users and Yuna AI.
 
-There are several ways of editing your application.
+📍 Real-Time Navigation Get turn-by-turn directions to your chosen destination.
 
-**Use Lovable**
+📊 Visitor Count Tracking View live visitor statistics for each location to plan your trip better.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/68bcdf8e-5c22-408d-b565-96876db18b31) and start prompting.
+💡 AI-Powered Chatbot Yuna AI is backed by both Node.js and Python servers with secure API key integration to deliver reliable and intelligent responses.
 
-Changes made via Lovable will be committed automatically to this repo.
+🛠️ Tech Stack
 
-**Use your preferred IDE**
+Technology Purpose TypeScript + React Frontend Web App with type safety and structure Node.js Backend server for chatbot and API handling Python AI model logic and additional backend processes LiveKit Real-time voice communication GitHub Version control & collaboration HTML Page structure CSS Styling and hover effects ⚙️ Setup Instructions bash Copy Edit
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Clone the repository
+git clone https://github.com/Ram-sah19/Tourust-ai.git cd Tourust-ai
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Install dependencies (Node.js)
+npm install
 
-Follow these steps:
+Install Python dependencies
+pip install -r requirements.txt
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Add your API key for the chatbot (create .env file)
+API_KEY=your_api_key_here
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Run the development servers
+npm start # For Node backend and frontend python backend.py # For Python AI backend 🧠 About Yuna AI Yuna AI is a smart, multilingual travel assistant designed to:
 
-# Step 3: Install the necessary dependencies.
-npm i
+Describe tourist spots in detail
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Answer frequently asked questions
 
-**Edit a file directly in GitHub**
+Offer navigation and route guidance
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Speak and interact in multiple languages
 
-**Use GitHub Codespaces**
+Connect via voice and text
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+📸 Screenshots (Add screenshots or GIF demos here)
 
-## What technologies are used for this project?
+✨ Future Enhancements 📶 Offline access
 
-This project is built with:
+🧭 Personalized trip suggestions
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+🤝 Integration with local travel services
 
-## How can I deploy this project?
+🕶️ Augmented Reality view for live place identification
 
-Simply open [Lovable](https://lovable.dev/projects/68bcdf8e-5c22-408d-b565-96876db18b31) and click on Share -> Publish.
+🤝 Contributors Ram Bilas — Developer & Project Lead
 
-## Can I connect a custom domain to my Lovable project?
+📄 License This project is licensed under the MIT License — feel free to use, modify, and share!
 
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+🌐 Live Demo Coming soon...
