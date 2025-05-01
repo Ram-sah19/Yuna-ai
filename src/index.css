@@ -1,0 +1,120 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 30% 98%;
+    --foreground: 20 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 15% 15%;
+
+    --primary: 15 70% 55%;
+    --primary-foreground: 60 30% 96%;
+
+    --secondary: 40 75% 62%;
+    --secondary-foreground: 20 15% 15%;
+
+    --muted: 40 15% 94%;
+    --muted-foreground: 20 10% 40%;
+
+    --accent: 220 80% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 15% 85%;
+    --input: 20 15% 85%;
+    --ring: 15 70% 55%;
+
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .kolam-overlay {
+    @apply before:absolute before:inset-0 before:bg-kolam-pattern before:opacity-5 before:bg-repeat before:pointer-events-none;
+  }
+  
+  .glass {
+    @apply bg-white/90 backdrop-blur-sm border border-white/40 shadow-soft rounded-xl;
+  }
+  
+  .card-highlight {
+    @apply bg-gradient-to-br from-tamil-cream to-white/80 backdrop-blur-sm border border-tamil-brown/10 shadow-lg rounded-xl;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+  
+  /* Fix circular dependency by directly defining the properties instead of using @apply with before:bg-texture */
+  .bg-texture {
+    position: relative;
+  }
+  
+  .bg-texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1566041510639-8d95a2490bfb?auto=format&fit=crop&q=80');
+    opacity: 0.03;
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    pointer-events: none;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-tamil-terracotta to-tamil-coral bg-clip-text text-transparent;
+  }
+}
+
+@layer components {
+  .heading-decorative {
+    @apply font-serif font-bold relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-1/3 after:h-1 after:bg-gradient-to-r after:from-tamil-terracotta after:to-tamil-coral;
+  }
+  
+  .btn-tamil {
+    @apply px-4 py-2 bg-gradient-to-r from-tamil-terracotta to-tamil-coral text-white rounded-lg hover:from-tamil-coral hover:to-tamil-terracotta transition-all shadow-md hover:shadow-lg font-medium;
+  }
+  
+  .nav-link {
+    @apply text-foreground hover:text-tamil-blue transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tamil-blue after:transition-all hover:after:w-full;
+  }
+  
+  /* Destination card with group styling separated */
+  .destination-card {
+    @apply relative overflow-hidden rounded-xl shadow-soft hover:shadow-lg transition-all duration-300;
+  }
+  
+  .destination-card-content {
+    @apply absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white transform transition-transform translate-y-2;
+  }
+  
+  /* Group hover handled separately */
+  .destination-card:hover .destination-card-content {
+    @apply translate-y-0;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-soft;
+  }
+  
+  .shimmer {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer;
+  }
+}
